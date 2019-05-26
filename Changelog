@@ -1,0 +1,16 @@
+Version History:
+Date:		||	Time:	||	Version:
+04/26/2019	||	05:37PM	||	0.0.0.0		|| This is a sorting class(cont)
+designed for Windows 10. It is intended to sort multiple objects of the same type. Multiple sorting algorithms are planned for implementation.
+
+04/26/2019	||	06:55PM	||	0.2.0.0
+two functions have been implemented, but yet untested. Quicksort Algorithm is implemented.
+
+04/27/2019	||	06:55PM	||	0.2.1.2
+quicksort algorithm is fixed	and selection sort is implemented.
+
+04/26/2019	||	05:37PM	||	0.8.8.8
+8 functions have been implemented and fixed in this version.
+
+04/28/2019	||	06:33PM	||	0.8.8.9
+Fixed an issue with Quicksort
