@@ -40,6 +40,7 @@ namespace AB_SortingClass
 	void optQuicksort(int* list, int low, int high, int ssSize);
 	int optPartition(int* list, int low, int high);
 	void optSelectionSort(int* list, int low, int size);
+	void combSort(int* list, int size);
 
 
 	//randomizes an array.

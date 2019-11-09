@@ -199,10 +199,35 @@ namespace AB_SortingClass
 				break;
 		}
 	}
+	//Resource: https://en.wikipedia.org/wiki/Comb_sort
+	void combSort(int* list, int size)
+	{
+		int gap = size;
+		double shrink = 1.3;
+		bool sorted = false;
+		while (sorted == false)
+		{
+			gap = floor(gap / shrink);
+			if (gap <= 1) {
+				gap = 1;
+				sorted = true;
+			}
+			int i = 0;
+			while ((i + gap < size))
+			{
+				if (list[i] > list[i + gap]) 
+				{
+					swap(list[i], list[i + gap]);
+					sorted = false;
+				}
+				i++;
+			}
+		}
+	}
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Function: Partition													||
+	||	Function: Randomizes array											||
 	||																		||
 	||	Function calls:														||
 	||																		||
@@ -234,6 +259,7 @@ namespace AB_SortingClass
 			}
 		}
 	}
+
 	void printArr(int* arr, int size)
 	{
 		for (int i = 0; i < size; i++)
