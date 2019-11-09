@@ -1,30 +1,7 @@
 /*--------------------------------------------------------------------------||
 ||	Programmer:			Alexander Burton									||
 ||	Date Created:		4/26/2019											||
-||	Version:			0.8.8.8												||
 ||	File:				ABSortingClass.cpp									||
-||	Compiler Info:															||
-||		Hardware:															||
-||			MB:																||
-||				Manu:		BaseBoard Manufacturer	ASUSTeK COMPUTER INC.	||
-||				Chipset:	BaseBoard Product	P8Z77-V PRO					||
-||																			||
-||			CPU:															||
-||				Chipset:	Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz			||
-||				Clock Rate:	3401 Mhz										||
-||				Cores:		4												||
-||				processors:	8												||
-||																			||
-||			RAM:															||
-||				Manu:				Kingston								||
-||				Capacity(indiv):	4GB										||
-||				Count:				4										||
-||				Capacity(total):	16.0GB									||
-||				Type:				240-Pin DDR3 SDRAM DDR3 1333 (PC3 10600)||
-||																			||
-||		Software:															||
-||				OS:			Windows 10 Home Edition							||
-||				IDE:		Visual Studio 2019								||
 ||																			||
 ||	Functions:																||
 ||																			||
@@ -40,24 +17,6 @@
 ||																			||
 ||	Variables:																||
 ||		N/A																	||
-||	Notes:																	||
-||	Version History:														||
-||	Date:		||	Time:	||	Version:	||	Description:				||
-||	04/26/2019	||	05:37PM	||	0.0.0.0		|| This is a sorting class(cont)||
-||	designed for Windows 10. It is intended to sort multiple objects of the	||
-||	same type. Multiple sorting algorithms are planned for implementation.	||
-||																			||
-||	04/26/2019	||	06:55PM	||	0.2.0.0		|| two functions have been		||
-||	implemented, but yet untested. Quicksort Algorithm is implemented.		||
-||																			||
-||	04/27/2019	||	06:55PM	||	0.2.1.2		|| quicksort algorithm is fixed	||
-||	and selection sort is implemented.										||
-||																			||
-||	Version History:														||
-||	Date:		||	Time:	||	Version:	||	Description:				||
-||	04/26/2019	||	05:37PM	||	0.8.8.8		|| 8 functions have been(cont)	||
-||	implemented and fixed in this version.									||
-||																			||
 ----------------------------------------------------------------------------*/
 #include "ABSortingClass.h"
 
@@ -67,7 +26,6 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.1											||
 	||	Function: Quicksort													||
 	||																		||
 	||	Function calls:														||
@@ -79,17 +37,6 @@ namespace AB_SortingClass
 	||																		||
 	||	Notes:																||
 	||		When calling the function, subtract 1 from the third parameter.	||
-	||																		||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.1.1.0		|| This is a quicksort(cont)||
-	||	algorithm that partitions the data set, which entails moving all	||
-	||	elements greater than a given pivot to one side, and elements less	||
-	||	than to the other until the sort size is zero.						||
-	||	n log(n) best case time complexity.									||
-	||																		||
-	||	04/28/2019	||	06:33PM	||	0.1.1.1		|| Fixed an issue with(cont)||
-	||	sorting.															||
 	||																		||
 	||----------------------------------------------------------------------*/
 	void quicksort(int* list, int low, int high)
@@ -104,24 +51,12 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.1											||
 	||	Function: Partition													||
 	||																		||
 	||	Function calls:														||
 	||																		||
 	||	Called by:															||
 	||		void quicksort(int* list, int low, int high)					||
-	||	Notes:																||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.0.1.0		|| This is a partition(cont)||
-	||	algorithm that partitions the data set, which entails moving all	||
-	||	elements greater than a given pivot to one side, and elements less	||
-	||	than to the other until the sort size is zero.						||
-	||	n log(n) best case time complexity.									||
-	||																		||
-	||	04/28/2019	||	06:33PM	||	0.1.1.1		|| Fixed an issue with(cont)||
-	||	sorting.															||
 	||																		||
 	||----------------------------------------------------------------------*/
 	int partition(int* list, int low, int high)
@@ -142,20 +77,11 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.0											||
 	||	Function: Partition													||
 	||																		||
 	||	Function calls:														||
 	||																		||
 	||	Called by:															||
-	||																		||
-	||	Notes:																||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.0.1.0		|| This is a sorting(cont)	||
-	||	algorithm that goes through 2 loops(nested) comparing two values	||
-	||	and swapping relevent elements until the entire array is sorted.	||
-	||	Exponential time.(n^2)												||
 	||																		||
 	||----------------------------------------------------------------------*/
 	void selectionSort(int* list, int low, int size)
@@ -180,7 +106,6 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.1											||
 	||	Function: optimized Quicksort										||
 	||																		||
 	||	Function calls:														||
@@ -191,18 +116,8 @@ namespace AB_SortingClass
 	||	Called by:															||
 	||																		||
 	||	Notes:																||
-	||		When calling the function, subtract 1 from the third parameter.	||
-	||																		||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.1.1.0		|| This is a quicksort(cont)||
-	||	algorithm that partitions the data set, which entails moving all	||
-	||	elements greater than a given pivot to one side, and elements less	||
-	||	than to the other until the sort size is zero.						||
-	||	n log(n) best case time complexity.									||
-	||																		||
-	||	04/28/2019	||	06:33PM	||	0.1.1.1		|| Fixed an issue with(cont)||
-	||	sorting.															||
+	||		When calling the function from outside this scope, subtract 1	||
+	||	from the third parameter.											||
 	||																		||
 	||----------------------------------------------------------------------*/
 	void optQuicksort(int* list, int low, int high, int ssSize)
@@ -230,24 +145,12 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.1											||
 	||	Function: optPartition												||
 	||																		||
 	||	Function calls:														||
 	||																		||
 	||	Called by:															||
 	||		void optQuicksort(int* list, int low, int high)					||
-	||	Notes:																||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.0.1.0		|| This is a partition(cont)||
-	||	algorithm that partitions the data set, which entails moving all	||
-	||	elements greater than a given pivot to one side, and elements less	||
-	||	than to the other until the sort size is zero.						||
-	||	n log(n) best case time complexity.									||
-	||																		||
-	||	04/28/2019	||	06:33PM	||	0.1.1.1		|| Fixed an issue with(cont)||
-	||	sorting.															||
 	||																		||
 	||----------------------------------------------------------------------*/
 	int optPartition(int* list, int low, int high)
@@ -270,21 +173,12 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.0											||
 	||	Function: Partition													||
 	||																		||
 	||	Function calls:														||
 	||																		||
 	||	Called by:															||
 	||		void optQuicksort(int* list, int low, int high)					||
-	||																		||
-	||	Notes:																||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.0.1.0		|| This is a sorting(cont)	||
-	||	algorithm that goes through 2 loops(nested) comparing two values	||
-	||	and swapping relevent elements until the entire array is sorted.	||
-	||	Exponential time.(n^2) for use with optQuicksort					||
 	||																		||
 	||----------------------------------------------------------------------*/
 	void optSelectionSort(int* list, int low, int size)
@@ -308,20 +202,12 @@ namespace AB_SortingClass
 	/*----------------------------------------------------------------------||
 	||	Programmer:			Alexander Burton								||
 	||	Date Created:		4/26/2019										||
-	||	Version:			0.1.1.0											||
 	||	Function: Partition													||
 	||																		||
 	||	Function calls:														||
 	||																		||
 	||	Called by:															||
 	||			void randomizeArr(int* list, int size)						||
-	||																		||
-	||	Notes:																||
-	||	Version History:													||
-	||	Date:		||	Time:	||	Version:	||	Description:			||
-	||	04/26/2019	||	05:37PM	||	0.1.1.0		|| This is a randomizer		||
-	||	fucntion using a left index and a right index that point to an		||
-	||	that has been passed in via pointer.								||
 	||																		||
 	||----------------------------------------------------------------------*/
 	void randomizeArr(int* list, int size)

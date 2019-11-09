@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------||
 ||	Programmer:			Alexander Burton									||
 ||	Date Created:		4/26/2019											||
-||	Version:			0.8.8.8												||
+||	Version:			0.8.8.9												||
 ||	File:				SortDriver.cpp										||
 ||	Compiler Info:															||
 ||		Hardware:															||
@@ -40,10 +40,6 @@
 ||																			||
 ||	Variables:																||
 ||		N/A																	||
-||	Notes:																	||
-||	Version History:														||
-||	Date:		||	Time:	||	Version:	||	Description:				||
-||	04/26/2019	||	05:37PM	||	0.0.0.0		|| This is a sorting class(cont)||
 ||																			||
 ----------------------------------------------------------------------------*/
 #include <iostream>
