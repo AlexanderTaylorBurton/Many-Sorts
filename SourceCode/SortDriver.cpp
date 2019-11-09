@@ -69,6 +69,7 @@ int main()
 	int itemSize = 0;
 	int exitStatus = EXIT_SUCCESS;
 	int RandomNumbers[MAX_SIZE];
+	int SecondaryArray[MAX_SIZE];
 	cout << humanWelcome << humanWelcome2 << endl;
 	cout << makeChoice << endl << ssChoice << ssName << endl << qsChoice <<
 		qsName << endl << oqsChoice << oqsName << endl;
@@ -78,11 +79,11 @@ int main()
 		cout << "Please enter a proper value.\n";
 		cin >> choice;
 	}
-	while (((toupper(choice) < 'A' || toupper(choice) > 'C'))
-		&& ((choice < '1') || (choice > '3')))
+	while (((toupper(choice) < 'A' || toupper(choice) > 'D'))
+		&& ((choice < '1') || (choice > '4')))
 	{
 		cout << "Values are out of range." <<
-			" Please choose a number between 1 and 3, or A,B, or C" << endl;
+			" Please choose a number between 1 and 4, or A Through D." << endl;
 		cin >> choice;
 		while (cin.fail())
 		{
@@ -112,6 +113,7 @@ int main()
 	{
 		RandomNumbers[i] = (i + 1);
 	}
+	randomizeArr(RandomNumbers, itemSize);
 	cout << "Initializing ";
 	choice = toupper(choice);
 	switch (choice)
@@ -131,7 +133,13 @@ int main()
 		cout << oqsName << "." << endl;
 		optQuicksort(RandomNumbers, 0, itemSize-1, SSSIZE);
 		break;
+	case '4':
+	case 'D':
+		cout << "Combsort test START!" << endl;
+		combSort(RandomNumbers, itemSize);
 	}
+
+
 	cout << "Sorting completed." << endl;
 	cout << "Printing Array." << endl;
 	printArr(RandomNumbers, itemSize);
